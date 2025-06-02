@@ -1,7 +1,17 @@
 # aggregationAssignmentHard
 
 <pre>
-  Q1:
+1. Category Value and Classification:
+
+- **Task:** For each `category`, calculate its total inventory value (sum of `price * quantity` for all products in that category). Then, classify each category: if total value > 10000, it's "High Value"; if > 5000, it's "Medium Value"; otherwise, it's "Standard Value".
+- **Output:** Display `category` (as `categoryName`), `totalInventoryValue`, and `valueClassification`.
+- **Hint:** First `$group` by category to sum `price * quantity`. Then use `$project` with `$cond` (possibly nested or using `$switch`) for classification.
+  
+</pre>
+
+
+<pre>
+
 
   Code:
 db.products.aggregate([
